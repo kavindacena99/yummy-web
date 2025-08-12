@@ -2,6 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const { default: mongoose } = require('mongoose');
+const sellerRoutes = require('./controllers/sellerRoutes');
+const customerRoutes = require('./controllers/customerRoutes');
 
 dotenv.config();
 

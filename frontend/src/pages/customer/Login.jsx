@@ -1,21 +1,36 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import API from '../services/api';
 
 function Login(){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
 
-    const handleSubmit = async (e) => {
+    const navigate = useNavigate();
 
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        
+        try{
+            const response = await API.post('/customer/login',{ email, password});
+            navigate('/customer');
+        }catch(error){
+            if(error.message){
+                setError(error.response.data.message || "Invalid Username and Password");
+            }else{
+                setError("Unable to connect to the server. Please try again later.");
+            }
+        }
     }
 
     return(
         <div>
             <h1>Customer Login</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="email" /><br />
                 <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="password" /><br />
-                <button onSubmit={handleSubmit}>Login</button>
+                <button>Login</button>
             </form>
             <h1>Don't have an account?</h1>
             <button onClick={() => window.location.href="/customersign"}>Create a account</button>

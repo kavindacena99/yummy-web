@@ -1,9 +1,9 @@
-import jwt from 'jsonwebtoken';
-import Customer from '../models/Customer.js';
-import Seller from '../models/Seller.js';
-import Admin from '../models/Admin.js';
+const jwt = require('jsonwebtoken');
+const Customer = require('../models/Customer');
+const Admin = require('../models/Admin');
+const Seller = require('../models/Seller');
 
-const protect = async () => {
+const protect = async (req,res,next) => {
     let token;
 
     if (req.headers.authorization?.startsWith('Bearer')) {
