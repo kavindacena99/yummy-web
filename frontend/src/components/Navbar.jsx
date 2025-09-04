@@ -7,12 +7,9 @@ function Navbar(){
                 <div>
                     <h2 className="nav-item">Logo</h2>
                 </div>
-                <ul className="nav">
-                    <li className="nav-item font-semibold">Home</li>
-                    <li className="nav-item font-semibold">About</li>
-                    <li className="nav-item font-semibold">Contact</li>
-                </ul>
                 <div className="nav">
+                    <h2 className="nav-item"><a href="">My Cart</a></h2>
+                    
                     <button className="bg-red-500 text-white px-4 py-2 rounded">
                         Logout
                     </button>

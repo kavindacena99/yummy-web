@@ -12,3 +12,7 @@
 .nav-item{
     margin: 10px;
 }
+
+.cart-items-flex{
+    display: flex;
+}
