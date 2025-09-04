@@ -5,7 +5,7 @@ function Navbar(){
         <div>
             <div className="navbar justify-between bg-green-300">
                 <div>
-                    <h2 className="nav-item">Logo</h2>
+                    <h1 className="nav-item text-xl font-bold">🍴 YummyFood</h1>
                 </div>
                 <div className="nav">
                     <h2 className="nav-item"><a href="">My Cart</a></h2>
