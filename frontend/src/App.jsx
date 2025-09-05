@@ -6,6 +6,7 @@ import CustomerSign from './pages/customer/Signup';
 import CustomerLogin from './pages/customer/Login';
 import SellerHome from './pages/seller/Home';
 import CustomerHome from './pages/customer/Home';
+import Product from './pages/Product';
 
 function App(){
     return(
@@ -18,6 +19,7 @@ function App(){
                 <Route path="/customerlogin" element={<CustomerLogin />} />
                 <Route path="/customersign" element={<CustomerSign />} />
                 <Route path="/customer" element={<CustomerHome/>} />
+                <Route path="/product" element={<Product />} />
             </Routes>
         </Router>
     );

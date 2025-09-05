@@ -1,18 +1,37 @@
-import Cartitem from '../components/Cartitem';
 import Itemcard from '../components/Itemcard';
 import Navbar from '../components/Navbar';
 import React from 'react';
-import Profilecard from '../components/Profilecard';
 import Footer from '../components/Footer';
 import Categorycard from '../components/Categorycard';
-//const navigate = useNavigate();
 
 function Home(){
     return(
         <div>
             <Navbar />
-            <h1>This is the home page</h1>
-            <Categorycard />
+            <h1 className='font-bold text-3xl p-5'>Flash Foods</h1>
+            <div className='ml-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+                <Itemcard />
+                <Itemcard />
+                <Itemcard />
+                <Itemcard />
+                <Itemcard />
+                <Itemcard />
+            </div>
+            <h1 className='font-bold text-3xl p-5'>Categories</h1>
+            <div className='ml-5 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'>
+                <Categorycard />
+                <Categorycard />
+                <Categorycard />
+                <Categorycard />
+                <Categorycard />
+            </div>
+            <h1 className='font-bold text-3xl p-5'>Just for you</h1>
+            <div className='ml-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+                <Itemcard />
+                <Itemcard />
+                <Itemcard />
+                <Itemcard />
+            </div>
             <Footer />
         </div>
     );

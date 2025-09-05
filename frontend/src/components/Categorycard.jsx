@@ -1,7 +1,7 @@
 function Categorycard(){
     return(
         <div>
-            <div className="w-1/5 border rounded">
+            <div className="w-1/2 m-4 border rounded">
                 <div className="m-2">
                     <img src="https://www.dummyimg.in/placeholder?format=JPEG" alt="" />
                 </div>
