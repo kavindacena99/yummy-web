@@ -7,6 +7,7 @@ import CustomerLogin from './pages/customer/Login';
 import SellerHome from './pages/seller/Home';
 import CustomerHome from './pages/customer/Home';
 import Product from './pages/Product';
+import Login from './pages/Login';
 
 function App(){
     return(
@@ -20,6 +21,7 @@ function App(){
                 <Route path="/customersign" element={<CustomerSign />} />
                 <Route path="/customer" element={<CustomerHome/>} />
                 <Route path="/product" element={<Product />} />
+                <Route path='/login' element={<Login />} />
             </Routes>
         </Router>
     );

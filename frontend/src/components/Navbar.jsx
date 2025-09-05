@@ -9,7 +9,7 @@ function Navbar(){
                 </div>
                 <div className="nav">
                     <h2 className="nav-item"><a href="">My Cart</a></h2>
-                    
+                    <h2 className="nav-item"><a href="">My Profile</a></h2>
                     <button className="bg-red-500 text-white px-4 py-2 rounded">
                         Logout
                     </button>
